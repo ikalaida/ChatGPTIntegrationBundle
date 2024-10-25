@@ -1,0 +1,24 @@
+{
+    "name": "hch/chatgpt-integration-bundle",
+    "description": "A Symfony bundle to integrate ChatGPT API.",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.4",
+        "symfony/framework-bundle": "^5.4|^6.0|^7.1",
+        "symfony/http-client": "^5.4|^6.0|^7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "HCH\\ChatGPTIntegrationBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HCH\\ChatGPTIntegrationBundle\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
