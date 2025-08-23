@@ -1,5 +1,5 @@
 {
-    "name": "hch/chatgpt-integration-bundle",
+    "name": "ikalaida/chatgpt-integration-bundle",
     "description": "A Symfony bundle to integrate ChatGPT API.",
     "type": "symfony-bundle",
     "license": "MIT",
