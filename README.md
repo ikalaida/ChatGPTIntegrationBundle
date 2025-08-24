@@ -5,7 +5,16 @@ This bundle provides a simple way to integrate ChatGPT API with Symfony applicat
 ## Installation
 
 ```bash
-composer require HCH/chatgpt-integration-bundle
+ "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ikalaida/ChatGPTIntegrationBundle.git"
+        }
+    ],
+```
+
+```bash
+composer require ikalaida/chatgpt-integration-bundle
 ```
 
 ## Configuration
@@ -13,11 +22,14 @@ composer require HCH/chatgpt-integration-bundle
 In your Symfony config, add your OpenAI API key, API URL, and model:
 
 ```yaml
-# config/packages/chatgpt_integration.yaml
-chatgpt_integration:
-    api_key: '%env(CHATGPT_API_KEY)%'
-    api_url: 'https://api.openai.com/v1/chat/completions'
-    model: 'gpt-3.5-turbo'
+# /config/services.yaml
+HCH\ChatGPTIntegrationBundle\Service\ChatGPTClient:
+    autowire: true
+    autoconfigure: true
+    arguments:
+        $apiKey: '%env(OPENAI_API_KEY)%'
+        $apiUrl: '%env(OPENAI_API_URL)%'
+        $model: '%env(OPENAI_MODEL)%'
 ```
 
 ## Usage
