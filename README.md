@@ -32,6 +32,13 @@ HCH\ChatGPTIntegrationBundle\Service\ChatGPTClient:
         $model: '%env(OPENAI_MODEL)%'
 ```
 
+```
+# .env
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxx
+OPENAI_API_URL=https://api.openai.com/v1/responses
+OPENAI_MODEL=gpt-5-nano
+```
+
 ## Usage
 
 Inject the `ChatGPTClient` service wherever needed:
